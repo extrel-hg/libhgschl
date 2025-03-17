@@ -1,4 +1,4 @@
-# libhgschl - v0.2.0
+# libhgschl - v0.3.0
 
 ## Przedmowa
  
@@ -7,8 +7,8 @@
  Wydawana pod licencją **GPLv3**.
 
  ## Sposób ustalania wersji biblioteki
-
-Biblioteka używa "wersjowania semantycznego" w wersji 2.0.0. Kopia używanego przeze mnie systemu znajduje się w additionalresources/semver.txt.
+e
+Biblioteka używa "wersjowania semantycznego" w wersji 2.0.0. Kopia używanego przeze mnie systemu znajduje się w additionalresources/semver.md.
 
 ## Autor
 
