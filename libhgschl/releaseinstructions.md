@@ -1,0 +1,3 @@
+* update header in readme, docs
+* move readme, license, docs and library to folder hgschl_vx.y.z
+* zip folder and release
