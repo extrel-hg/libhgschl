@@ -83,7 +83,7 @@ void intswaptest()
 {
     std::cout<<testtitletab<<"void intswap(int& a, int& b)\n\n";
 
-    std::cout<<"Argumenty: a = 1, b = 5\nOczekiwany wynik: b = 5, a = 1\n";
+    std::cout<<"Argumenty: a = 1, b = 5\nOczekiwany wynik: a = 5, b = 1\n";
     int a = 1;
     int b = 5;
     intswap(a,b);
@@ -121,6 +121,14 @@ void bubblesorttest()
     std::cout<<"\nArgumenty: ({2,1,6,2,5,8,1,214,-6,0},10)\nOczekiwany wynik: {-6,0,1,1,2,2,5,6,8,214}\n";
     bubblesort(d,10);
     wypisztablice(d,10);
+
+    int e[15];
+    wypelnijlosowotablice(e,15,0,9);
+    std::cout<<"\nArgumenty: ";
+    wypisztablice(e,15);
+    std::cout<<"Oczekiwany wynik: posortowana tablica.\n";
+    bubblesort(e,15);
+    wypisztablice(e,15);
 
     std::cout<<"\n";
 

@@ -20,14 +20,25 @@ void bubblesort(int a[], int n)
             intswap(a[1],a[0]);
         }
     }
-    
+
+    int jmin, jmax;
+    jmin = 1;
+    jmax = n;
     for(int i = 0; i < n+1; i++)
     {
         bool sorted = true;
-        for(int j = 1; j < n; j++)
+        int tempjmin = jmin;
+        int tempjmax = jmax;
+        for(int j = jmin; j < jmax; j++)
         {
+            if(tempjmin >= 0)
+            {
+                tempjmin = j;
+            }
             if(a[j] < a[j-1])
             {
+                tempjmin = -tempjmin;
+                tempjmax = j;
                 sorted = false;
                 intswap(a[j],a[j-1]);
             }

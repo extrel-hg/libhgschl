@@ -1,3 +1,7 @@
+## vdev ddev
+### Patch
+* Zoptymalizowano funkcję `void bubblesort`.
+
 ## v0.4.0 2025.03.18
 ### Minor
 * Dodano funkcję `bool parzysta`.
