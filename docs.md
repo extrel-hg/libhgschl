@@ -1,4 +1,19 @@
-# libhgschl v0.3.1
+# libhgschl v0.4.0
+
+## void bubblesort(int a[], int n)
+Funkcja sortuje tablicę sposobem bubblesort. Obecnie, nie jest to najbardziej optymalna forma algorytmu bubblesort.
+`int a[]` to tablica sortowana, `int n` to ile elementów od początku będzie posortowanych. Daj `n` równe rozmiarowi tablicy, by posortować całą tablicę.
+
+```
+int a[6] = {6,5,4,3,2,1};
+bubblesort(a,6);
+```
+
+## void intswap(int& a, int& b)
+Funkcja jako argumenty bierze dwie wartości integer, a następnie je zamienia.
+
+## bool parzysta(int a)
+Dla dowolnego int a zwraca prawda (1) gdy a jest parzyste, a fałsz (0) gdy a jest nieparzyste.
 
 ## int szybkiepotegowanie(int a, int b, bool* error = NULL)
 Rekurencyjna funkcja szybkiego potengowania, a^b, gdzie b >= 0.

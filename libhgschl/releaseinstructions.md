@@ -1,4 +1,5 @@
 * update version in readme, docs
+* add changenotes to changelogs.md
 
-* move readme, license, docs and library to folder libhgschl_vx.y.z
+* move readme, license, changelogs, docs and library to folder libhgschl_vx.y.z
 * zip folder and release

@@ -1,6 +1,43 @@
 #pragma once
 #include <iostream>
 
+void intswap(int& a, int& b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+    return;
+}
+
+void bubblesort(int a[], int n)
+{
+    if(n < 1) return;
+    if(n == 1) return;
+    if(n == 2)
+    {
+        if(a[1] < a[0])
+        {
+            intswap(a[1],a[0]);
+        }
+    }
+    
+    for(int i = 0; i < n+1; i++)
+    {
+        bool sorted = true;
+        for(int j = 1; j < n; j++)
+        {
+            if(a[j] < a[j-1])
+            {
+                sorted = false;
+                intswap(a[j],a[j-1]);
+            }
+        }
+        if(sorted) return;
+    }
+
+    return;
+}
+
 void wypisztablice(int a[], int n)
 {
     if(n < 0) n = 0;
@@ -50,4 +87,11 @@ int szybkiepotegowanie(int a, int b, bool* error = NULL)
     }
    
     return -1;
+}
+
+bool parzysta(int a)
+{
+    if(a%2 == 0) return true;
+    if(a%2 != 0) return false;
+    return false;
 }
