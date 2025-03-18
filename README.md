@@ -1,4 +1,4 @@
-# libhgschl - v0.3.0
+# libhgschl - v0.3.1
 
 ## Przedmowa
 

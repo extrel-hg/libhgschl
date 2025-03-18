@@ -1,4 +1,4 @@
-# libhgschl v0.3.0
+# libhgschl v0.3.1
 
 ## int szybkiepotegowanie(int a, int b, bool* error = NULL)
 Rekurencyjna funkcja szybkiego potengowania, a^b, gdzie b >= 0.
