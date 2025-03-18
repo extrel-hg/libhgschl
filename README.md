@@ -14,7 +14,11 @@ Biblioteka jest typu **header-only**, więc instalacja w każdym środowisku pow
 
 Wystarczy, że do kodu załaczysz plik nagłówkowy, np. `#include "libhgschl.h"` i przekażesz kompilatorowi informacje, gdzie znaleść pliki nagłówkowe.
 
-Mój program testowy używa systemu budowania **CMake**, gdzie za ten proces odpowiada poniższy fragment kodu.
+W folderze libhgschl/tests znajduje się plik tests.cpp, który zawiera program testowy sprawdzający funkcjonalość całej biblioteki.
+
+### CMake
+
+Mój projekt używa systemu budowania **CMake**, gdzie za ten proces załączania biblioteki odpowiada poniższy fragment kodu.
 
 Linijka nr 3 załącza bibliotekę jako plik źródłowy, a linijka nr 7 przekazuje informacje gdzie znajdują się pliki nagłówkowe. Należy pamiętać, że moja biblioteka to plik nagłówkowy.
 
@@ -29,6 +33,14 @@ Linijka nr 3 załącza bibliotekę jako plik źródłowy, a linijka nr 7 przekaz
 8 )
 ```
 
+### Code::Blocks
+
+Proces instalacji biblioteki do Code::Blocks, dla projektów z tylko jednym plikiem **.cpp** (czytaj: prawie każdy program pisany podczas rozwiązywania zadań), wygląda następująco:
+
+1. Pobierz bibliotekę.
+2. Przenieś plik `libhgschl.h` do tego samego folderu, w którym znajduje się twój plik **.cpp**.
+3. W pliku **.cpp**, na samej górze, dodaj linijkę `#include "libhgschl.h"`
+
 ### Zależności
 
 **libhgschl** wymaga dostępu do biblioteki standardowej C++ (standard C11), konkretniej biblioteki \<iostream>;
@@ -39,7 +51,7 @@ Postanowiłem napisać tę bibliotekę ze względu na to, że w szkole często p
 
 Biblioteka zawiera więc jak najlepsze implementacje często używanych funkcji wraz z ich dokumentacją.
 
-libhgschl stworzył Hubert Gonera z LO3 we Wrocławiu.
+**libhgschl** stworzył Hubert Gonera z LO3 we Wrocławiu.
 
 ## Sposób ustalania wersji biblioteki
 
