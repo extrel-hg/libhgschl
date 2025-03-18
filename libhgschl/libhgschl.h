@@ -9,6 +9,20 @@ void intswap(int& a, int& b)
     return;
 }
 
+int easyrand(int a, int b)
+{
+    if(b<a)
+    {
+        intswap(a,b);
+    }
+    if(b==a)
+    {
+        return a;
+    }
+    int out = rand() % (b-a+1) + a;
+    return out;
+}
+
 void bubblesort(int a[], int n)
 {
     if(n < 1) return;
@@ -63,10 +77,14 @@ void wypisztablice(int a[], int n)
 
 void wypelnijlosowotablice(int t[], int n, int a = 0, int b = 10)
 {
+    if(b<a)
+    {
+        intswap(a,b);
+    }
     if(n < 0) n = 0;
     for(int i = 0; i < n; i++)
     {
-        t[i] = (rand() % (b-a+1)) + a;
+        t[i] = easyrand(a,b);
     }
     return;
 }

@@ -1,7 +1,9 @@
 #include "libhgschl.h"
 #include <iostream>
+#include <cmath>
 
 std::string testtitletab = "=========================================== ";
+std::string errorline =    "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # ";
 
 void wypisztablicetest()
 {
@@ -43,20 +45,24 @@ void szybkiepotegowanietest()
     std::cout<<testtitletab<<"int szybkiepotegowanie(int a, int b, bool* error = NULL)\n\n";
     std::cout<<"Argumenty: (2,8)\nOczekiwany wynik: 2^8 (256)\n";
     std::cout<<szybkiepotegowanie(2,8)<<"\n\n";
+    if(szybkiepotegowanie(2,8) != std::pow(2,8)) std::cout<<errorline<<"Blad w porownaniu z biblioteka standardowa.\n\n";
 
     std::cout<<"Argumenty: (0,0)\nOczekiwany wynik: 0^0 (1)\n";
     std::cout<<szybkiepotegowanie(0,0)<<"\n\n";
+    if(szybkiepotegowanie(0,0) != std::pow(0,0)) std::cout<<errorline<<"Blad w porownaniu z biblioteka standardowa.\n\n";
 
     std::cout<<"Argumenty: (1,123)\nOczekiwany wynik: 1^123 (1)\n";
     std::cout<<szybkiepotegowanie(1,123)<<"\n\n";
+    if(szybkiepotegowanie(1,123) != std::pow(1,123)) std::cout<<errorline<<"Blad w porownaniu z biblioteka standardowa.\n\n";
 
     std::cout<<"Argumenty: (-3,5)\nOczekiwany wynik: (-3)^5 (-243)\n";
     std::cout<<szybkiepotegowanie(-3,5)<<"\n\n";
+    if(szybkiepotegowanie(-3,5) != std::pow(-3,5)) std::cout<<errorline<<"Blad w porownaniu z biblioteka standardowa.\n\n";
 
     std::cout<<"Argumenty: (2,-5,&error)\nOczekiwany wynik: Wykladnik ujemny (-1)\n";
     bool error = false;
-    std::cout<<szybkiepotegowanie(2,-5, &error)<<"\n";
-    if(error) std::cout<<"Blad. Wykladnik ujemny\n\n";
+    std::cout<<szybkiepotegowanie(2,-5, &error);
+    if(error) std::cout<<" Blad. Wykladnik ujemny\n\n";
 
     return;
 }
@@ -88,6 +94,13 @@ void intswaptest()
     int b = 5;
     intswap(a,b);
     std::cout<<"a = "<<a<<", b = "<<b<<"\n\n";
+    {
+        int aprim = 1, bprim = 5;
+        int abis = 1, bbis = 5;
+        intswap(aprim,bprim); std::swap(abis,bbis);
+        if(aprim != abis || bprim != bbis) std::cout<<errorline<<"Blad w porownaniu z biblioteka standardowa.\n\n";
+    }
+    
 
     std::cout<<"Argumenty: t[0] = 7, t[1] = 4\nOczekiwany wynik: t[0] = 4, t[1] = 7\n";
     int t[2];
@@ -96,6 +109,20 @@ void intswaptest()
     intswap(t[0],t[1]);
     std::cout<<"t[0] = "<<t[0]<<", t[1] = "<<t[1]<<"\n\n";
 
+    return;
+}
+
+void easyrandtest()
+{
+    std::cout<<testtitletab<<"int easyrand(int a, int b)\n\n";
+
+    std::cout<<"Argumenty: (-5,10)\nOczekiwany wynik: Losowe liczby należące do [-5,10]. (Funkcja wywoływana jest kilka razy)\n";
+    std::cout<<easyrand(-5,10)<<" "<<easyrand(-5,10)<<" "<<easyrand(-5,10)<<" "<<easyrand(-5,10)<<" "<<easyrand(-5,10)<<"\n";
+
+    std::cout<<"\nArgumenty: (-5,-6)\nOczekiwany wynik: Losowe liczby należące do [-6,-5]. (Funkcja wywoływana jest kilka razy)\n";
+    std::cout<<easyrand(-5,-6)<<" "<<easyrand(-5,-6)<<" "<<easyrand(-5,-6)<<" "<<easyrand(-5,-6)<<" "<<easyrand(-5,-6)<<"\n";
+
+    std::cout<<"\n";
     return;
 }
 
@@ -139,16 +166,27 @@ int main()
 {
     std::cout<<"\n";
 
+    srand(time(NULL));
+    std::string t;
+
+    std::cin.get();
     bubblesorttest();
 
+    std::cin.get();
+    easyrandtest();
+
+    std::cin.get();
     intswaptest();
 
+    std::cin.get();
     parzystatest();
 
+    std::cin.get();
     szybkiepotegowanietest();
 
-    srand(time(NULL));
+    std::cin.get();
     wypelnijlosowotablicetest();
 
+    std::cin.get();
     wypisztablicetest();
 }

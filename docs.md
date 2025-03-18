@@ -1,13 +1,28 @@
-# libhgschl v0.4.0
+# libhgschl v0.5.0
+
+# Filozofia biblioteki
+
+## Sortowanie tablic
+
+Wszelkie sortowanie tablic tudzież sprawdzanie ich posortowania jest domyślnie wykonywane rosnąco: pierwszy element jest najmniejszy, ostatni największy.
+
+# Funkcje
 
 ## void bubblesort(int a[], int n)
-Funkcja sortuje tablicę sposobem bubblesort. Obecnie, nie jest to najbardziej optymalna forma algorytmu bubblesort.
+Funkcja sortuje tablicę sposobem bubblesort. Obecnie nie jest to najbardziej optymalna forma algorytmu bubblesort.
 `int a[]` to tablica sortowana, `int n` to ile elementów od początku będzie posortowanych. Daj `n` równe rozmiarowi tablicy, by posortować całą tablicę.
 
 ```
 int a[6] = {6,5,4,3,2,1};
 bubblesort(a,6);
 ```
+
+## int easyrand(int a, int b)
+Zwraca wartość losową w przedziale od a do b, włącznie.
+
+Należy wywołać funkcję `srand()` przed pierwszym wywołaniem funkcji `easyrand`.
+
+Jeżeli podane b jest mniejsze niż a, wartości są zamieniane.
 
 ## void intswap(int& a, int& b)
 Funkcja jako argumenty bierze dwie wartości integer, a następnie je zamienia.
@@ -43,6 +58,8 @@ Wypełnia pierwsze n pozycji tablicy integer losowymi wartościami w zakresie od
 Przed pierwszym wywołaniem funkcji, należy wywołać funkcję `srand` w następujący sposób: `srand(time(NULL))`.
 
 Jeśli funkcja zostanie wywołana bez ustawienia wartości a i b, to domyślnie zostanie użyty przedział od 0 do 10.
+
+Jeśli b jest mniejsze niż a, a i b zostaną zamienione.
 
 ## void wypisztablice(int a[], int n)
 Wypisuje pierwsze n elementów tablicy integer. Segmentation fault dla n większych niż ilość elementów. Dla n < 0 nie są wypisane żadne elementy.
