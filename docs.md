@@ -1,4 +1,4 @@
-# libhgschl v0.5.0
+# libhgschl v0.6.0
 
 # Filozofia biblioteki
 
@@ -7,6 +7,8 @@
 Wszelkie sortowanie tablic tudzież sprawdzanie ich posortowania jest domyślnie wykonywane rosnąco: pierwszy element jest najmniejszy, ostatni największy.
 
 # Funkcje
+
+Wszystkie funkcje znajdują się w namespace hg. Przy używaniu biblioteki można albo dodać linijkę kodu `using namespace hg`, lub przy wywołaniu każej funkcji dodać tekst `hg::`, np. `hg::parzysta(4)`.
 
 ## void bubblesort(int a[], int n)
 Funkcja sortuje tablicę sposobem bubblesort. Obecnie nie jest to najbardziej optymalna forma algorytmu bubblesort.

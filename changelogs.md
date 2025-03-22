@@ -1,3 +1,8 @@
+## v0.6.0 2025.03.22
+### Minor
+* Wszystkie funkcje znajdują się w namespace hg.
+* Dodano skrypty .bat do testowania i budowania biblioteki w systemie Windows.
+
 ## v0.5.0 2025.03.18
 ### Minor
 * Dodano funkcję `int easyrand`.

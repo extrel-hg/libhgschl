@@ -5,6 +5,8 @@
 std::string testtitletab = "=========================================== ";
 std::string errorline =    "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # ";
 
+using namespace hg;
+
 void wypisztablicetest()
 {
     std::cout<<testtitletab<<"void wypisztablice(int a[], int n)\n\n";
@@ -80,7 +82,7 @@ void parzystatest()
     std::cout<<parzysta(0)<<"\n\n";
 
     std::cout<<"Argument: -3\nOczekiwany wynik: 0\n";
-    std::cout<<parzysta(-3)<<"\n\n";
+    std::cout<<hg::parzysta(-3)<<"\n\n";
 
     return;
 }
@@ -116,10 +118,10 @@ void easyrandtest()
 {
     std::cout<<testtitletab<<"int easyrand(int a, int b)\n\n";
 
-    std::cout<<"Argumenty: (-5,10)\nOczekiwany wynik: Losowe liczby należące do [-5,10]. (Funkcja wywoływana jest kilka razy)\n";
+    std::cout<<"Argumenty: (-5,10)\nOczekiwany wynik: Losowe liczby nalezace do [-5,10]. (Funkcja wywolywana jest kilka razy)\n";
     std::cout<<easyrand(-5,10)<<" "<<easyrand(-5,10)<<" "<<easyrand(-5,10)<<" "<<easyrand(-5,10)<<" "<<easyrand(-5,10)<<"\n";
 
-    std::cout<<"\nArgumenty: (-5,-6)\nOczekiwany wynik: Losowe liczby należące do [-6,-5]. (Funkcja wywoływana jest kilka razy)\n";
+    std::cout<<"\nArgumenty: (-5,-6)\nOczekiwany wynik: Losowe liczby nalezace do [-6,-5]. (Funkcja wywolywana jest kilka razy)\n";
     std::cout<<easyrand(-5,-6)<<" "<<easyrand(-5,-6)<<" "<<easyrand(-5,-6)<<" "<<easyrand(-5,-6)<<" "<<easyrand(-5,-6)<<"\n";
 
     std::cout<<"\n";
