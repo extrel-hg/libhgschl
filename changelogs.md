@@ -1,3 +1,10 @@
+## v0.7.0 2025.04.02
+### Minor
+* Jeżeli do `int easyrand` zostanie przywołany tylko argument a, to zostanie on zwrócony.
+* Dodano funkcję `void wypelnijtablice`.
+* Dodano funkcje `maks` i `minim`.
+* Dodano funkcję `initrand`.
+
 ## v0.6.0 2025.03.22
 ### Minor
 * Wszystkie funkcje znajdują się w namespace hg.

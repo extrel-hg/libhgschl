@@ -3,6 +3,17 @@
 
 namespace hg
 {
+    int maks(int a, int b)
+    {
+        if(a >= b) return a;
+        return b;
+    }
+
+    int minim(int a, int b)
+    {
+        if(a <= b) return a;
+        return b;
+    }
 
     void intswap(int& a, int& b)
     {
@@ -10,6 +21,11 @@ namespace hg
         a = b;
         b = temp;
         return;
+    }
+
+    void initrand()
+    {
+        srand(time(NULL));
     }
 
     int easyrand(int a, int b)
@@ -24,6 +40,10 @@ namespace hg
         }
         int out = rand() % (b-a+1) + a;
         return out;
+    }
+    int easyrand(int a)
+    {
+        return a;
     }
 
     void bubblesort(int a[], int n)
@@ -88,6 +108,15 @@ namespace hg
         for(int i = 0; i < n; i++)
         {
             t[i] = easyrand(a,b);
+        }
+        return;
+    }
+    void wypelnijtablice(int t[], int n, int a = 0)
+    {
+        if(n < 0) n = 0;
+        for(int i = 0; i < n; i++)
+        {
+            t[i] = a;
         }
         return;
     }

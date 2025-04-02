@@ -42,6 +42,20 @@ void wypelnijlosowotablicetest()
     return;
 }
 
+void wypelnijtablicetest()
+{
+    std::cout<<testtitletab<<"void wypelnijtablice(int t[], int n, int a = 0)\n\n";
+
+    int a[15];
+
+    std::cout<<"Argumenty: (a,15,9)\nOczekiwany wynik: tablica wypelniona elementem 9.\n";
+    wypelnijtablice(a,15,9);
+    wypisztablice(a,15);
+    std::cout<<"\n";
+
+    return;
+}
+
 void szybkiepotegowanietest()
 {
     std::cout<<testtitletab<<"int szybkiepotegowanie(int a, int b, bool* error = NULL)\n\n";
@@ -124,6 +138,34 @@ void easyrandtest()
     std::cout<<"\nArgumenty: (-5,-6)\nOczekiwany wynik: Losowe liczby nalezace do [-6,-5]. (Funkcja wywolywana jest kilka razy)\n";
     std::cout<<easyrand(-5,-6)<<" "<<easyrand(-5,-6)<<" "<<easyrand(-5,-6)<<" "<<easyrand(-5,-6)<<" "<<easyrand(-5,-6)<<"\n";
 
+    std::cout<<"\nArgument: (2)\nOczekiwany wynik: 2\n";
+    std::cout<<easyrand(2)<<"\n";
+
+    std::cout<<"\nArgumenty: (155)\nOczekiwany wynik: 155\n";
+    std::cout<<easyrand(155)<<"\n";
+
+    std::cout<<"\n";
+    return;
+}
+
+void maxtest()
+{
+    std::cout<<testtitletab<<"int maks(int a, int b)\n\n";
+
+    std::cout<<"Argumenty: (-5,10), (20,10), (7,7)\nOczekiwany wynik: 10 20 7\n";
+    std::cout<<maks(-5,10)<<" "<<maks(20,10)<<" "<<maks(7,7)<<"\n";
+
+    std::cout<<"\n";
+    return;
+}
+
+void mintest()
+{
+    std::cout<<testtitletab<<"int minim(int a, int b)\n\n";
+
+    std::cout<<"Argumenty: (-5,10), (20,10), (7,7)\nOczekiwany wynik: -5 10 7\n";
+    std::cout<<minim(-5,10)<<" "<<minim(20,10)<<" "<<minim(7,7)<<"\n";
+
     std::cout<<"\n";
     return;
 }
@@ -168,7 +210,7 @@ int main()
 {
     std::cout<<"\n";
 
-    srand(time(NULL));
+    initrand();
     std::string t;
 
     std::cin.get();
@@ -181,6 +223,12 @@ int main()
     intswaptest();
 
     std::cin.get();
+    maxtest();
+
+    std::cin.get();
+    mintest();
+
+    std::cin.get();
     parzystatest();
 
     std::cin.get();
@@ -188,6 +236,9 @@ int main()
 
     std::cin.get();
     wypelnijlosowotablicetest();
+
+    std::cin.get();
+    wypelnijtablicetest();
 
     std::cin.get();
     wypisztablicetest();
