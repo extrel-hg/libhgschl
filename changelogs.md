@@ -1,3 +1,7 @@
+## v0.7.1 2025.04.10
+## Patch:
+* Małe optymalizacje w funkcjach `bubblesort` `wypisztablice` `wypelnijlosowotablice`.
+
 ## v0.7.0 2025.04.02
 ### Minor
 * Jeżeli do `int easyrand` zostanie przywołany tylko argument a, to zostanie on zwrócony.

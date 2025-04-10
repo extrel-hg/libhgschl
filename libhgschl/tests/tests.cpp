@@ -1,5 +1,6 @@
 #include "libhgschl.h"
-#include <iostream>
+
+//Biblioteka uzyta tylko do porownania z biblioteka standardowa
 #include <cmath>
 
 std::string testtitletab = "=========================================== ";
