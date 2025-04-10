@@ -1,4 +1,4 @@
-# libhgschl v0.7.0
+# libhgschl v0.7.2
 
 # Filozofia biblioteki
 
@@ -14,6 +14,20 @@ Wszelkie sortowanie tablic tudzież sprawdzanie ich posortowania jest domyślnie
 # Funkcje
 
 Wszystkie funkcje znajdują się w namespace hg. Przy używaniu biblioteki można albo dodać linijkę kodu `using namespace hg`, lub przy wywołaniu każej funkcji dodać tekst `hg::`, np. `hg::parzysta(4)`.
+
+# Spis treści
+
+1. void bubblesort(int a[], int n)
+2. int easyrand(int a, int b)
+3. void initrand()
+4. void intswap(int& a, int& b)
+5. int maks(int a, int b)
+6. int minim(int a, int b)
+7. bool parzysta(int a)
+8. int szybkiepotegowanie(int a, int b, bool* error = NULL)
+9. void wypelnijlosowotablice(int t[], int n, int a = 0, int b = 10)
+10. void wypelnijtablice(int t[], int n, int a = 0)
+11. void wypisztablice(int a[], int n)
 
 ## void bubblesort(int a[], int n)
 Funkcja sortuje tablicę sposobem bubblesort. Obecnie nie jest to najbardziej optymalna forma algorytmu bubblesort.

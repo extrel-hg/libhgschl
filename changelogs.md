@@ -1,3 +1,7 @@
+## v0.7.2 2025.04.10
+## Patch:
+* Dodano spis treści do docs.md.
+
 ## v0.7.1 2025.04.10
 ## Patch:
 * Małe optymalizacje w funkcjach `bubblesort` `wypisztablice` `wypelnijlosowotablice`.

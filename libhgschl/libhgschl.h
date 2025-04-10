@@ -1,5 +1,14 @@
 #pragma once
 #include <iostream>
+/*
+TO ADD:
+
+easytimemeasure function
+auto start = std::chrono::high_resolution_clock::now();
+auto finish = std::chrono::high_resolution_clock::now();
+std::cout << std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count() << "ns\n";
+
+*/
 
 namespace hg
 {
@@ -41,6 +50,7 @@ namespace hg
         int out = rand() % (b-a+1) + a;
         return out;
     }
+    
     int easyrand(int a)
     {
         return a;
