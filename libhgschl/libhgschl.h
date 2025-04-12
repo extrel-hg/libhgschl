@@ -1,5 +1,14 @@
 #pragma once
 #include <iostream>
+/*
+TO ADD:
+
+easytimemeasure function
+auto start = std::chrono::high_resolution_clock::now();
+auto finish = std::chrono::high_resolution_clock::now();
+std::cout << std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count() << "ns\n";
+
+*/
 
 namespace hg
 {
@@ -41,6 +50,7 @@ namespace hg
         int out = rand() % (b-a+1) + a;
         return out;
     }
+    
     int easyrand(int a)
     {
         return a;
@@ -48,8 +58,7 @@ namespace hg
 
     void bubblesort(int a[], int n)
     {
-        if(n < 1) return;
-        if(n == 1) return;
+        if(n <= 1) return;
         if(n == 2)
         {
             if(a[1] < a[0])
@@ -88,7 +97,7 @@ namespace hg
 
     void wypisztablice(int a[], int n)
     {
-        if(n < 0) n = 0;
+        if(n < 0) return;
         for(int i = 0; i < n;i++)
         {
             std::cout<<a[i];
@@ -100,11 +109,11 @@ namespace hg
 
     void wypelnijlosowotablice(int t[], int n, int a = 0, int b = 10)
     {
+        if(n < 0) return;
         if(b<a)
         {
             intswap(a,b);
         }
-        if(n < 0) n = 0;
         for(int i = 0; i < n; i++)
         {
             t[i] = easyrand(a,b);

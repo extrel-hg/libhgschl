@@ -1,6 +1,8 @@
 #include "libhgschl.h"
-#include <iostream>
+
+//Biblioteka uzyta tylko do porownania z biblioteka standardowa
 #include <cmath>
+#include <chrono>
 
 std::string testtitletab = "=========================================== ";
 std::string errorline =    "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # ";
